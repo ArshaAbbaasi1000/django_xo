@@ -1,0 +1,108 @@
+<!--
+    جا برای حرف زدن
+-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+*{
+ box-sizing:border-box;
+}
+
+.mybutton{
+ background-color:#ffffff;
+ width: 190px;
+ height: 190px;
+ border: 2px solid black;
+ border-radius:7px;
+ color:#000;
+ padding:23px 30px;
+ text-align: center; 
+ line-height: 130px;   
+ font-size:50px;
+ cursor:pointer;
+ transition:0.7s;
+ margin-bottom:10px;
+ display:block;
+ text-decoration:none;
+}
+
+.mybutton:hover{
+ background-color:#555;
+ border-radius:10px;
+}
+
+.white{
+ background-color:#ffffff;
+}
+
+.ybutton{
+ background-color:#FFDD00;
+ width: 160px;
+ height: 40px;
+ border: 0px solid black;
+ border-radius:100px;
+ color:#000;
+ padding:23px 30px;
+ text-align: center; 
+ line-height: 2px;   
+ font-size:20px;
+ cursor:pointer;
+ transition:0.7s;
+ margin-bottom:10px;
+ display:block;
+ text-decoration:none;
+}
+
+.ww{
+	width: 210px;
+}
+
+.ybutton:hover{
+ background-color:#FDFF18;
+ border-radius:80px;
+}
+
+.yellow{
+ background-color:#FFDF2F;
+}
+
+
+</style>
+</head>
+<body style="background-color:aquamarine;">
+	<div align="center">
+		<div style="font-family:verdana"><small></small> <p> {{turn}}:  <font color="red">{{error}}</font></p></div>
+		<table >
+			<tr>
+				<td><a href="/xo/?col=0&row=0" class="mybutton white">{{game.0.0}} </a></td>
+				<td><a href="/xo/?col=1&row=0" class="mybutton white">{{game.0.1}} </a></td>
+				<td><a href="/xo/?col=2&row=0" class="mybutton white">{{game.0.2}} </a></td>
+			</tr>
+			<tr>
+				<td><a href="/xo/?col=0&row=1" class="mybutton white">{{game.1.0}} </a></td>
+				<td><a href="/xo/?col=1&row=1" class="mybutton white">{{game.1.1}} </a></td>
+				<td><a href="/xo/?col=2&row=1" class="mybutton white">{{game.1.2}} </a></td>
+			</tr>
+			<tr>
+				<td><a href="/xo/?col=0&row=2" class="mybutton white">{{game.2.0}} </a></td>
+				<td><a href="/xo/?col=1&row=2" class="mybutton white">{{game.2.1}} </a></td>
+				<td><a href="/xo/?col=2&row=2" class="mybutton white">{{game.2.2}}</a></td>
+			</tr>
+		</table>
+				
+		<form action="/xo/" method="get">
+			<input name=new_game hidden="true" type="text" value="true">
+			<input class="ybutton yellow"  value="new game" type="submit">
+		</form>
+
+		<a href="http://127.0.0.1:8000/" class="ybutton yellow ww"><div style="font-family:verdana"><small></small>Back to menu.</div></a>
+
+	</div>
+</body>
+</html>
+
+<!-- onclick="window.location.href='https://w3docs.com';" -->
