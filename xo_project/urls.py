@@ -23,6 +23,7 @@ from xo_app import views
 urlpatterns = [
     path('' , views.page1),
     path('xo/' , views.index),
+    path('developers/' , views.dev),
     path('404/' , views.e404),
     path('computer_xo/' , views.index2),
     path('admin/', admin.site.urls),

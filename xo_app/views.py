@@ -404,10 +404,15 @@ def page1(request):
 
 def e404(request):
     # template = loader.get_template('board_1.html' )
-    template = loader.get_template('e404.html' )
+    template = loader.get_template('e404.html' ) 
     context = {}
     return HttpResponse(template.render(context, request))
 
+def dev(request):
+    # template = loader.get_template('board_1.html' )
+    template = loader.get_template('dev.html' ) 
+    context = {}
+    return HttpResponse(template.render(context, request))
 
 def index2(request):
     ng = request.GET.get('new_game',"false")
